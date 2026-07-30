@@ -1,0 +1,60 @@
+---
+title: "NHL Height and Position Study"
+format:
+  html:
+    toc: true
+---
+
+## A quick look at the shape of hockey players
+
+This project uses a hockey player dataset from the provided archive to explore how height varies by position. The charts below were created from the data itself, and the summary table uses one row per player so the results are easier to read.
+
+### Why this matters
+
+Height can influence a player’s style, reach, and matchup profile. In hockey, that matters for faceoffs, defensive positioning, and the ability to cover space in transition. The data show that most players fall near 180 cm, with defensemen slightly taller on average than forwards.
+
+### Key takeaways
+
+- Most players are clustered near the 180 cm range.
+- Defensemen are the tallest group on average.
+- Forwards make up the largest share of players in the dataset.
+- Goalies appear as a smaller and more specialized group.
+
+### Histogram of heights
+
+The histogram below shows how often different height bands appear in the dataset. Hover over the chart to inspect the bars more closely.
+
+<iframe src="assets/interactive-histogram.html" width="100%" height="560" style="border:none; border-radius:16px;"></iframe>
+
+### Height by position
+
+This interactive boxplot compares the spread of heights across position groups and makes the center and range of each group easier to read.
+
+<iframe src="assets/interactive-boxplot.html" width="100%" height="560" style="border:none; border-radius:16px;"></iframe>
+
+### Interactive comparison
+
+This interactive chart gives a quick visual comparison of average height across the main position groups.
+
+<iframe src="assets/interactive-chart.html" width="100%" height="560" style="border:none; border-radius:16px;"></iframe>
+
+### Summary table
+
+The table below summarizes the dataset in a clean, easy-to-scan format. Counts reflect unique players rather than repeated league-season rows.
+
+| Position group | Players | Average height | Median height |
+| --- | ---: | ---: | ---: |
+| Defense | 30,064 | 184.0 cm | 183.0 cm |
+| Forward | 54,023 | 181.0 cm | 180.0 cm |
+| Goalie | 5 | 179.0 cm | 178.0 cm |
+| Other | 1 | 171.0 cm | 171.0 cm |
+
+### Written description
+
+The dataset suggests that hockey rewards a wide range of body types, but the numbers still show a recognizable pattern. Players cluster around the 180 cm range, with defenders slightly taller than forwards. That makes the distribution feel both broad and structured at the same time, which fits how hockey combines athleticism, strategy, and specialized roles.
+
+These charts make the story visible in a way that raw numbers alone cannot. The histogram shows the overall shape of the population, while the boxplot highlights how the position groups differ in spread and center.
+
+::: {.callout-note}
+Data source: This project uses a Kaggle-based hockey player dataset packaged in the provided archive. The archive does not include an exact publication date, so I am treating it as a 2024-era Kaggle-style reference dataset for this project.
+:::

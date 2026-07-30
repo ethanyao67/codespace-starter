@@ -1,0 +1,29 @@
+[
+  {
+    "position_group": "Defense",
+    "count": 30064,
+    "mean_height": 183.6,
+    "median_height": 183,
+    "sd_height": 5.8
+  },
+  {
+    "position_group": "Forward",
+    "count": 54023,
+    "mean_height": 181.1,
+    "median_height": 180,
+    "sd_height": 5.8
+  },
+  {
+    "position_group": "Goalie",
+    "count": 5,
+    "mean_height": 179.4,
+    "median_height": 178,
+    "sd_height": 4.7
+  },
+  {
+    "position_group": "Other",
+    "count": 1,
+    "mean_height": 171,
+    "median_height": 171
+  }
+]

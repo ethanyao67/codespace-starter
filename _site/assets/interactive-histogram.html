@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Interactive Histogram</title>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <style>
+      body { margin: 0; font-family: Arial, sans-serif; background: #071b2f; color: #f8fbff; }
+      .wrap { padding: 20px; }
+      #hist { width: 100%; height: 520px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="hist"></div>
+    </div>
+    <script>
+      const heights = Array.from({length: 30000}, (_, i) => 150 + (i % 50) + Math.random() * 4);
+      const trace = {
+        x: heights,
+        type: 'histogram',
+        marker: { color: '#4fd1c5' },
+        nbinsx: 20
+      };
+      const layout = {
+        title: 'Interactive histogram of player heights',
+        paper_bgcolor: '#071b2f',
+        plot_bgcolor: '#071b2f',
+        font: { color: '#f8fbff', family: 'Segoe UI, sans-serif' },
+        xaxis: { title: 'Height (cm)', gridcolor: '#214a67', range: [150, 210] },
+        yaxis: { title: 'Count', gridcolor: '#214a67' },
+        bargap: 0.05,
+        margin: { t: 60, r: 20, b: 50, l: 50 }
+      };
+      Plotly.newPlot('hist', [trace], layout, {displayModeBar: false});
+    </script>
+  </body>
+</html>

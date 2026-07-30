@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Interactive Boxplot</title>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <style>
+      body { margin: 0; font-family: Arial, sans-serif; background: #071b2f; color: #f8fbff; }
+      .wrap { padding: 20px; }
+      #box { width: 100%; height: 520px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="box"></div>
+    </div>
+    <script>
+      const groups = {
+        Defense: [180, 182, 183, 184, 185, 186, 188, 190, 192, 194, 196],
+        Forward: [170, 175, 178, 180, 181, 183, 184, 186, 188, 189],
+        Goalie: [175, 176, 178, 179, 181, 182],
+        Other: [171]
+      };
+      const data = Object.entries(groups).map(([name, values]) => ({
+        y: values,
+        type: 'box',
+        name,
+        boxpoints: 'all',
+        jitter: 0.3,
+        pointpos: -1.8,
+        marker: { color: name === 'Defense' ? '#4fd1c5' : name === 'Forward' ? '#70b7ff' : name === 'Goalie' ? '#ff6b6b' : '#f7d774' }
+      }));
+      const layout = {
+        title: 'Interactive boxplot of height by position',
+        paper_bgcolor: '#071b2f',
+        plot_bgcolor: '#071b2f',
+        font: { color: '#f8fbff', family: 'Segoe UI, sans-serif' },
+        yaxis: { title: 'Height (cm)', gridcolor: '#214a67', range: [165, 200] },
+        xaxis: { gridcolor: '#214a67' },
+        margin: { t: 60, r: 20, b: 40, l: 50 }
+      };
+      Plotly.newPlot('box', data, layout, {displayModeBar: false});
+    </script>
+  </body>
+</html>

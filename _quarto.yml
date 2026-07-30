@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: _site
+  preview:
+    port: 4200
+
+website:
+  title: "NHL Height and Position Study"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    page-layout: full

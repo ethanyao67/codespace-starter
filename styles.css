@@ -1,0 +1,85 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #071b2f 0%, #0f3b5c 45%, #0f172a 100%);
+  color: #f8fbff;
+  line-height: 1.7;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1.4rem 3rem;
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+p, li {
+  font-size: 1.04rem;
+}
+
+img {
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+figure img {
+  max-width: 100%;
+}
+
+.callout-note {
+  background: rgba(255,255,255,0.09);
+  border-left: 4px solid #4fd1c5;
+  padding: 1rem 1.1rem;
+  margin: 1.4rem 0;
+  border-radius: 0 12px 12px 0;
+}
+
+table,
+.table,
+.table thead th,
+.table tbody td,
+.table tbody tr {
+  background: #0f2236 !important;
+  color: #f8fbff !important;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 0.85rem 0.95rem;
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+  text-align: left;
+  color: #f8fbff !important;
+}
+
+.table thead th {
+  background: #14546d !important;
+  font-weight: 700;
+  color: #ffffff !important;
+}
+
+.table td:first-child {
+  font-weight: 600;
+}
+
+iframe {
+  background: #0f2236;
+  border: 0;
+  margin-top: 0.6rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
